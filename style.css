@@ -36,20 +36,20 @@ body {
     color: #333;
     font-weight: 900;
     transition: .2s;
+    text-decoration:none;
 }
 .head-wrap ul li a:hover {
-    color: #00ABDE;
+    color: #FE891F;
 }
 .conD {
 	color: #444;
 	padding-top: 45px;
 	padding-bottom: 45px;
 }
-.conD h1,p {
-	text-align: center;
-}
+
 .conD h1 {
 	color: #444;
+	text-align:center;
 }
 .conD p {
 	font-family: "times new roman";
@@ -57,6 +57,7 @@ body {
 	line-height: 1.5em;
 	color: #222;
 	font-size: 18px;
+	text-align:center;
 }
 .contents {
 	padding-bottom: 75px;
@@ -66,7 +67,6 @@ body {
 	color: #444;
 	font-size: 28px;
 	font-weight: bold;
-	text-align: center;
 	padding-top: 30px;
 }
 .contents p {
@@ -95,4 +95,107 @@ body {
 }
 .footer-wrap .container a {
 	font-size: 15px;
+}
+.container.footer-wrap > a {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000;
+}
+
+
+
+/***********************/
+/******* Gallery *******/
+/***********************/
+.bigShip img, .regularShip img {
+	width: 100%;
+	height: auto;
+}
+.hover-me a {
+	width: 100%; 
+	height: 100%;
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+#bigShip-thumb-caption {
+	background-color: rgba(255, 255, 255, .7);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	-webkit-transition: opacity .5s ease, background-color .5s ease;
+	-moz-transition: opacity .5s ease, background-color .5s ease;
+	-o-transition: opacity .5s ease, background-color .5s ease;
+	transition: opacity .5s ease, background-color .5s ease;
+}
+#bigShip-thumb-caption h2 {
+	font-style: italic;
+	padding-top: 0;
+	display: block;
+}
+#bigShip-thumb-caption p {
+	padding: 0 30px;
+	font-style: italic;
+	line-height: 1.6em;
+	font-size: 14px;
+}
+.hover-me {
+	width: 100%;
+	height: 335px;
+	background-color: silver;
+	background: url("images/DSC00742.jpg") no-repeat center center;
+	background-size: 100%;
+	overflow: hidden;
+	position: relative;
+	text-align:center;
+	background-size: cover;
+	background-position: center; 
+}
+.lighter{
+	background: url("images/lighter-show.jpg") no-repeat center center;
+}
+.hover-me:hover #bigShip-thumb-caption {
+	bottom: 0px;
+	opacity: 1;
+}
+.thumb-img > img {
+    height: 100%;
+    width: 100%;
+}
+.cv-drop {
+    padding: 0 30px 30px;
+    position: relative;
+    z-index: 1;
+}
+.cv-drop::after {
+  background: #ddebf9 none repeat scroll 0 0;
+  border-radius: 5px;
+  content: "";
+  height: 95%;
+  left: 15px;
+  position: absolute;
+  top: 0;
+  width: 92%;
+  z-index: -1;
+}
+.cv-drop > h2 {
+    font-size: 3em;
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+}
+@-webkit-keyframes hue {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+
+    to {
+      -webkit-filter: hue-rotate(360deg);
+    }
 }
