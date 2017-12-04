@@ -67,11 +67,15 @@ body {
 	padding-bottom: 75px;
 	background: url("images/bg.png") repeat-x bottom;
 }
+.contents a {
+	text-decoration: none;
+}
 .contents h2 {
 	color: #444;
-	font-size: 28px;
-	font-weight: bold;
-	padding-top: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
 }
 .contents p {
 	color: #222;
@@ -105,7 +109,39 @@ body {
     text-decoration: none;
     text-shadow: 1px 1px 1px #000;
 }
+.cv-drop {
+    padding: 0 30px 30px;
+    position: relative;
+    z-index: 1;
+}
+.cv-drop::after {
+  background: #ddebf9 none repeat scroll 0 0;
+  border-radius: 5px;
+  content: "";
+  height: 95%;
+  left: 15px;
+  position: absolute;
+  top: 0;
+  width: 92%;
+  z-index: -1;
+}
+.cv-drop > h2 {
+    font-size: 3em;
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+}
+@-webkit-keyframes hue {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
 
+    to {
+      -webkit-filter: hue-rotate(360deg);
+    }
+}
 
 
 /***********************/
@@ -155,9 +191,6 @@ body {
 	background-size: 100%;
 	overflow: hidden;
 	position: relative;
-	text-align:center;
-	background-size: cover;
-	background-position: center; 
 }
 .lighter{
 	background: url("images/lighter-show.jpg") no-repeat center center;
@@ -166,40 +199,279 @@ body {
 	bottom: 0px;
 	opacity: 1;
 }
-.thumb-img > img {
-    height: 100%;
-    width: 100%;
+.cap-inside {
+    text-align: center;
 }
-.cv-drop {
-    padding: 0 30px 30px;
-    position: relative;
-    z-index: 1;
-}
-.cv-drop::after {
-  background: #ddebf9 none repeat scroll 0 0;
-  border-radius: 5px;
-  content: "";
-  height: 95%;
-  left: 15px;
-  position: absolute;
-  top: 0;
-  width: 92%;
-  z-index: -1;
-}
-.cv-drop > h2 {
-    font-size: 3em;
-    color: #f35626;
-    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: hue 60s infinite linear;
-}
-@-webkit-keyframes hue {
-    from {
-      -webkit-filter: hue-rotate(0deg);
-    }
 
-    to {
-      -webkit-filter: hue-rotate(360deg);
-    }
+
+/**************************/
+/**** Gallery thumnail ****/
+/*
+	big-thumb HEIGHT- 				360px;
+	medium-thumb-vertical HEIGHT- 360px
+	small-thumb HEIGHT- 				172.5px
+*/
+/**************************/
+.bg-silver {
+	background-color: silver;
+}
+.bg-gray {
+	background-color: gray;
+}
+.big-thumb {
+	width: 100%;
+	height: 360px;
+	position: relative;
+}
+.small-thumb {
+	z-index: 4;
+	width: 100%;
+	height: 172.5px;
+}
+.medium-thumb-var {
+	width: 100%;
+	height: 360px;
+}
+.margin-top-plus {
+	margin-top: 15px;
+}
+.contents .col-md-6:first-of-type {
+	padding-right: 7.5px;
+}
+.contents .col-md-6:last-of-type {
+	padding-left: 7.5px;
+}
+/*###############################################################*/
+/*************** Heavy Ship Image Include Here *******************/
+/*###############################################################*/
+/*
+	those all image link will show for thumbnail (small img)
+*/
+.thumbnail1 {
+	background: url("images/show/thumbnail/thumb1.jpg") no-repeat center center;
+	background-size: 100%;
+	background-color: silver;
+}
+.thumbnail2 {
+	background: url("images/show/thumbnail/thumb2.jpg") no-repeat center center;
+	background-size: 280px;
+	background-color: gray;
+}
+.thumbnail3 {
+	background: url("images/show/thumbnail/thumb3.jpg") no-repeat center center;
+	background-size: 280px;
+	background-color: gray;
+}
+.thumbnail4 {
+	background: url("images/show/thumbnail/thumb4.jpg") no-repeat center center;
+	background-size: 280px;
+	background-color: gray;
+}
+.thumbnail5 {
+	background: url("images/show/thumbnail/thumb5.jpg") no-repeat center center;
+	background-size: 100%;
+	background-color: gray;
+}
+.thumbnail6 {
+	background: url("images/show/thumbnail/thumb6.jpg") no-repeat center center;
+	background-size: 100%;
+	background-color: gray;
+}
+.thumbnail7 {
+	background: url("images/show/thumbnail/thumb7.jpg") no-repeat left center;
+	background-size: 400px;
+	background-color: gray;
+}
+.thumbnail8 {
+	background: url("images/show/thumbnail/thumb8.jpg") no-repeat center center;
+	background-size: 100%;
+	background-color: silver;
+}
+
+/*#################################################################*/
+/*************** Regular Ship Image Include Here *******************/
+/*#################################################################*/
+/*
+	those all image link will show for thumbnail (small img)
+*/
+.rglr-thumbnail1 {
+	/*background: url("images/show/thumbnail/") no-repeat center center;*/
+	background-size: 100%;
+	background-color: silver;
+}
+.rglr-thumbnail2 {
+	/*background: url("images/show/thumbnail/") no-repeat center center;*/
+	background-size: 280px;
+	background-color: gray;
+}
+.rglr-thumbnail3 {
+	/*background: url("images/show/thumbnail/") no-repeat center center;*/
+	background-size: 280px;
+	background-color: gray;
+}
+.rglr-thumbnail4 {
+	/*background: url("images/show/thumbnail/") no-repeat center center;*/
+	background-size: 280px;
+	background-color: gray;
+}
+.rglr-thumbnail5 {
+	/*background: url("images/show/thumbnail/") no-repeat center center;*/
+	background-size: 100%;
+	background-color: gray;
+}
+.rglr-thumbnail6 {
+	/*background: url("images/show/thumbnail/") no-repeat center center;*/
+	background-size: 100%;
+	background-color: gray;
+}
+.rglr-thumbnail7 {
+	/*background: url("images/show/thumbnail/") no-repeat left center;*/
+	background-size: 400px;
+	background-color: gray;
+}
+.rglr-thumbnail8 {
+	/*background: url("images/show/thumbnail/") no-repeat center center;*/
+	background-size: 100%;
+	background-color: silver;
+}
+.thumb-group {
+	-webkit-transition: background-size .5s ease;
+	-moz-transition: background-size .5s ease;
+	-o-transition: background-size .5s ease;
+	transition: background-size .5s ease;
+}
+.inside-thumb {
+	width: 100%;
+	height: 100%;
+	background-color: none;
+	opacity: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	-webkit-transition: background-color .5s ease;
+	-moz-transition: background-color .5s ease;
+	-o-transition: background-color .5s ease;
+	transition: background-color .5s ease;
+}
+.wrapping {
+	opacity: 0;
+	text-align: center;
+	-webkit-transition: opacity .5s ease;
+	-moz-transition: opacity .5s ease;
+	-o-transition: opacity .5s ease;
+	transition: opacity .5s ease;
+}
+.wrapping h2 {
+	color: #444;
+	font-size: 22px;
+	padding-bottom: 25px;
+	-webkit-transition: padding-bottom .5s ease;
+	-moz-transition: padding-bottom .5s ease;
+	-o-transition: padding-bottom .5s ease;
+	transition: padding-bottom .5s ease;
+}
+.wrapping p {
+	padding: 0px 50px 0px 50px;
+	color: #222;
+	font-size: 14px;
+	font-style: italic;
+	padding-top: 0px;
+}
+
+/******* HOVER *******/
+.thumbnail1:hover, .rglr-thumbnail1:hover {
+	background-size: 110%;
+}
+.thumbnail1:hover .inside-thumb, .rglr-thumbnail1:hover .inside-thumb {
+	background-color: rgba(255,2555,255, .7);
+}
+.thumbnail1:hover .wrapping, .rglr-thumbnail1:hover .wrapping {
+	opacity: 1;
+}
+.thumbnail1:hover .wrapping h2, .rglr-thumbnail1:hover .wrapping h2 {
+	padding-bottom: 0px;
+}
+.thumbnail2:hover, .rglr-thumbnail2:hover {
+	background-size: 300px;
+}
+.thumbnail2:hover .inside-thumb, .rglr-thumbnail2:hover .inside-thumb {
+	background-color: rgba(255,2555,255, .7);
+}
+.thumbnail2:hover .wrapping, .rglr-thumbnail2:hover .wrapping {
+	opacity: 1;
+}
+.thumbnail2:hover .wrapping h2, .rglr-thumbnail2:hover .wrapping h2 {
+	padding-bottom: 0px;
+}
+.thumbnail3:hover, .rglr-thumbnail3:hover {
+	background-size: 300px;
+}
+.thumbnail3:hover .inside-thumb, .rglr-thumbnail3:hover .inside-thumb {
+	background-color: rgba(255,2555,255, .7);
+}
+.thumbnail3:hover .wrapping, .rglr-thumbnail3:hover .wrapping {
+	opacity: 1;
+}
+.thumbnail3:hover .wrapping h2, .rglr-thumbnail3:hover .wrapping h2 {
+	padding-bottom: 0px;
+}
+.thumbnail4:hover, .rglr-thumbnail4:hover {
+	background-size: 300px;
+}
+.thumbnail4:hover .inside-thumb, .rglr-thumbnail4:hover .inside-thumb {
+	background-color: rgba(255,2555,255, .7);
+}
+.thumbnail4:hover .wrapping, .rglr-thumbnail4:hover .wrapping {
+	opacity: 1;
+}
+.thumbnail4:hover .wrapping h2, .rglr-thumbnail4:hover .wrapping h2 {
+	padding-bottom: 0px;
+}
+.thumbnail5:hover, .rglr-thumbnail5:hover {
+	background-size: 110%;
+}
+.thumbnail5:hover .inside-thumb, .rglr-thumbnail5:hover .inside-thumb {
+	background-color: rgba(255,2555,255, .7);
+}
+.thumbnail5:hover .wrapping, .rglr-thumbnail5:hover .wrapping {
+	opacity: 1;
+}
+.thumbnail5:hover .wrapping h2, .rglr-thumbnail5:hover .wrapping h2 {
+	padding-bottom: 0px;
+}
+.thumbnail6:hover, .rglr-thumbnail6:hover {
+	background-size: 110%;
+}
+.thumbnail6:hover .inside-thumb, .rglr-thumbnail6:hover .inside-thumb {
+	background-color: rgba(255,2555,255, .7);
+}
+.thumbnail6:hover .wrapping, .rglr-thumbnail6:hover .wrapping {
+	opacity: 1;
+}
+.thumbnail6:hover .wrapping h2, .rglr-thumbnail6:hover .wrapping h2 {
+	padding-bottom: 0px;
+}
+.thumbnail7:hover, .rglr-thumbnail7:hover {
+	background-size: 420px;
+}
+.thumbnail7:hover .inside-thumb, .rglr-thumbnail7:hover .inside-thumb {
+	background-color: rgba(255,2555,255, .7);
+}
+.thumbnail7:hover .wrapping, .rglr-thumbnail7:hover .wrapping {
+	opacity: 1;
+}
+.thumbnail7:hover .wrapping h2, .rglr-thumbnail7:hover .wrapping h2 {
+	padding-bottom: 0px;
+}
+.thumbnail8:hover, .rglr-thumbnail8:hover {
+	background-size: 110%;
+}
+.thumbnail8:hover .inside-thumb, .rglr-thumbnail8:hover .inside-thumb {
+	background-color: rgba(255,2555,255, .7);
+}
+.thumbnail8:hover .wrapping, .rglr-thumbnail8:hover .wrapping {
+	opacity: 1;
+}
+.thumbnail8:hover .wrapping h2, .rglr-thumbnail8:hover .wrapping h2 {
+	padding-bottom: 0px;
 }
